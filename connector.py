@@ -1,6 +1,5 @@
 from pymongo import MongoClient
 
-
 class MongoDBConnector:
     """
     A class to handle MongoDB connections using pymongo.
@@ -72,26 +71,3 @@ class MongoDBConnector:
             print(f"An error occurred while connecting to MongoDB: {e}")
             raise
 
-
-
-# Example usage
-if __name__ == "__main__":
-    username = "sacha"
-    # password = "5QOpq203gKyHA7YocvCP"
-    password = "r0zb6koXhwPL8YZCB5c4"
-    host = "mongodb-3baed69e-ob7dcf057.database.cloud.ovh.net"
-    db_name = "admin"
-    replica_set = "replicaset"
-
-    connector = MongoDBConnector(username, password, host, db_name, replica_set)
-    client = connector.connect()
-    db = client.myDb
-
-    # Creating or switching to demoCollection
-    collection = db.demoCollection
-    # Printing the data inserted
-    cursor = collection.find()
-    for record in cursor:
-        print(record)
-
-    client.close()

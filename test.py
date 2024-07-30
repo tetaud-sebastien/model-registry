@@ -2,16 +2,11 @@ from connector import MongoDBConnector
 from store import store
 # Example usage
 
-
-
-# password = "5QOpq203gKyHA7YocvCP" sebastien
-
-
 if __name__ == "__main__":
 
-    username = "model"
-    password = "0V7YGqgzI1v8wNn2kubU"
-    host = "mongodb-3baed69e-ob7dcf057.database.cloud.ovh.net"
+    username = "admin"
+    password = "498oqkOn20EvTdMXfDAP"
+    host = "mongodb-2e57d7d7-ob7dcf057.database.cloud.ovh.net"
     db_name = "admin"
     replica_set = "replicaset"
 
