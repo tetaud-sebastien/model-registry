@@ -51,6 +51,7 @@ class MongoDBConnector:
             uri += "tls=true"
         else:
             uri = uri.rstrip('&')
+        print(uri)
         return uri
 
     def connect(self):

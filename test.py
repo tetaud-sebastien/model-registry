@@ -10,13 +10,14 @@ from store import store
 if __name__ == "__main__":
 
     username = "model"
-    password = "1QUpZPL8tNTn7zVxC29e"
+    password = "0V7YGqgzI1v8wNn2kubU"
     host = "mongodb-3baed69e-ob7dcf057.database.cloud.ovh.net"
     db_name = "admin"
     replica_set = "replicaset"
 
     connector = MongoDBConnector(username, password, host, db_name, replica_set)
     client = connector.connect()
+
     db = client.modelDb
 
     # Creating or switching to demoCollection
@@ -53,7 +54,9 @@ if __name__ == "__main__":
     "animate": True,
     "compute_metrics": True
     }
-
+    # Inserting the document into the collection
+    collection.insert_one(document1)
+    print("Document inserted successfully.")
     # Printing the data inserted
     cursor = collection.find()
     for record in cursor:
