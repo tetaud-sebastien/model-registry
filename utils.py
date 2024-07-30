@@ -7,6 +7,7 @@ import gridfs
 from loguru import logger
 
 
+
 def generate_model_name(config: dict) -> dict:
     """
     Generate a unique model name based on provided
@@ -71,11 +72,10 @@ def model_search(client, query):
         logger.warning('Model already is in the database')
         return fs, result
     else:
-        logger.info("Model is not in the database")
         return None, None
 
 
-def calculate_checksum(data):
+def calculate_checksum(data: bytes)-> float:
     """
     Calculate the checksum value for the given data.
 
